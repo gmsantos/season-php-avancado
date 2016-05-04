@@ -2,9 +2,11 @@
 
 // Considere o array
 
-$var = [
-    '2' => 1,
-    3  
+$var = [ 
+   '100' => 1,
+   3,
+   "b" => 4,
+   2 
 ];
 
 var_dump($var);
@@ -12,7 +14,7 @@ var_dump($var);
 /*
 O que precisamos alterar no codigo acima para produzir a seguinte saída?
 
-array(2) {
+array(4) {
   [2]=>  int(1)
   [3]=>  int(3)
   ["b"]=>  int(4)

@@ -45,9 +45,6 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", inline: <<-SHELL
-    # Atualiza o mirror para o Brasil
-    perl -p -i -e 's#http://au.archive.ubuntu.com/ubuntu#http://br.archive.ubuntu.com/ubuntu#gi' /etc/apt/sources.list
-	
     # Faz update da VM
     sudo apt-get update
     sudo apt-get upgrade -y --force-yes

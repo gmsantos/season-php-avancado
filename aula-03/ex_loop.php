@@ -14,3 +14,5 @@ $array = [
     2 => range(1 ,4),
     3 => range(1 ,4),
 ];
+
+var_dump($array);

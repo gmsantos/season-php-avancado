@@ -14,6 +14,11 @@ class Derivada extends Base
 {
     private $var = 2;
 
+    public function exibeVar()
+    {
+        return 'MAHUMAHUMAHUAMUHA Sobreescrevi seu metódo';
+    } 
+
 }
 
 $c = new Derivada();

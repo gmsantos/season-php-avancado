@@ -12,11 +12,12 @@ class Base
 
 class Derivada extends Base
 {
+    
     public function exibeVar()
     {
-        return $this->var;
+        return parent::$var;
     }
 }
 
 $c = new Derivada();
-$c->exibeVar();
+echo $c->exibeVar();

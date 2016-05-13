@@ -1,10 +1,11 @@
 <?php
 
+// Classe também pode ser final. Ex.: não pode ser extendida
 class Base 
 {
     private $var = 1;
     
-    public function exibeVar()
+    final public function exibeVar()
     {
         return $this->var;
     }   

@@ -25,6 +25,11 @@
         }
     }    
     
+   
+    class Pato extends Animal
+    { }
+    
+    
     $a = new Animal('Girafa');
     
     $a->especie('Mamifero');

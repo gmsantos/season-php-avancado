@@ -1,24 +1,28 @@
 <?php
 
 require_once 'Product.php';
+require_once 'Modelo.php';
+require_once 'Fabricante.php';
+require_once 'FabricanteLocal.php';
 
-define('TIPO', 'PHP avançado');
+echo '<pre>';
 
-echo TIPO. '<br>';
+$fabricante = new Fabricante('LG');
 
-//echo Product::FORNECEDOR;
+$modelo = new Modelo('teste', $fabricante);
+$modelo->name = 'Controle';
+$modelo->setPrice(50);
 
-$produto = new Product(1);
-$produto->name = 'Controle';
-$produto->price = 512;
-$produto->setPrice(50);
+echo $modelo->showInfo();
 
-echo $produto->showInfo();
+echo $modelo->vendaOnline() . '<br>';
 
-echo $produto->vendaOnline() . '<br>';
+var_dump($modelo);
 
-var_dump($produto);
+$modelo->tipo_modelo = Product::TIPO_VENDA_FISICA;
+echo $modelo->vendaOnline(). '<br>';
+var_dump($modelo);
 
-$produto->tipo_produto = Product::TIPO_VENDA_FISICA;
-echo $produto->vendaOnline(). '<br>';
-var_dump($produto);
+$modelo->dimensoes();
+
+echo $modelo->getNomeFabricante();

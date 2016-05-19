@@ -1,0 +1,12 @@
+{
+    "name": "acme/app",
+    "require": {
+        "gmsantos/inspiring": "^2.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Acme\\" : "src/Acme/",
+            "Xpto\\" : "Xpto/"
+        }
+    }
+}

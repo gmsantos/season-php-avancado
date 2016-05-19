@@ -1,9 +1,11 @@
 <?php
 
-spl_autoload_extensions(".php");
-spl_autoload_register();
+require 'vendor/autoload.php';
 
 use Acme\App;
+use Gmsantos\Inspiring;
 
 (new App())->run();
+
+echo Inspiring::quote();
 

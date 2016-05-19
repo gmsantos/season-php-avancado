@@ -1,0 +1,5 @@
+ - Traits
+ - Namespaces
+ - Autoload
+ - usando spl_autoloader_register
+ - Composer

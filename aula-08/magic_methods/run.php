@@ -34,5 +34,14 @@ echo $magica;
 // invoke - Usar um objeto como função
 echo $magica();
 
+// debugInfo
+var_dump($magica);
+
+// serialização
+$serial = serialize($magica);
+$new = unserialize($serial);
+
+var_dump($new);
+
 // Destruct
 unset($magica);

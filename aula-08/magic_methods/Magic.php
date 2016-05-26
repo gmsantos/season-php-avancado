@@ -1,5 +1,7 @@
 <?php
 
+class Teste {}
+
 /**
  * Métodos Mágicos
  */
@@ -7,11 +9,15 @@ class Magic
 {
     protected $myProperty;
     
-    protected $property2;    
+    protected $property2;
+    
+    protected $teste;
     
     public function __construct()
     {
         echo 'Classe instanciada' . PHP_EOL;
+        
+        $this->teste = new Teste();
     }
     
     public function __destruct()
@@ -59,7 +65,7 @@ class Magic
         return 'Método Inválido';
     }
     
-    public function __callStatic($name, $args)
+    public static function __callStatic($name, $args)
     {
         return 'Sou o método estático ' . $name . ' : ' . implode(',', $args) . PHP_EOL;
     }
@@ -74,5 +80,20 @@ class Magic
     public function __invoke()
     {
         return 'alguma função' . PHP_EOL;
+    }
+    
+    public function __sleep()
+    {
+        return ['myProperty'];
+    }
+    
+    public function __wakeup()
+    {
+        $this->property2 = 'Padrão';
+    }
+    
+    public function __clone()
+    {
+        $this->teste = clone $this->teste;
     }
 }

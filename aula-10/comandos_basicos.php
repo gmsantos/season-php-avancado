@@ -6,14 +6,26 @@ use Season\Model\User;
 
 //$params = [PDO::ATTR_PERSISTENT => true];
 
-$connection = new PDO('mysql:dbname=test;host=127.0.0.1', 'php', 'senha');
+try {
+    //$connection = new PDO('mysql:dbname=test;host=127.0.0.1', 'php', 'senha');
+    $connection = new PDO('sqlite:/opt/databases/mydb.sq');
+    
+} catch(PDOException $e) {
+    echo $e->getMessage();
+    
+    die();
+}
 
-//var_dump($connection->exec('CREATE DATABASE test'));
-//var_dump($connection->exec('USE DATABASE test'));
+var_dump($connection->exec('CREATE DATABASE test;'));
+var_dump($connection->exec('USE DATABASE test;'));
 
+var_dump($connection);
+/*
 foreach ($connection->query('SHOW TABLES;', PDO::FETCH_OBJ) as $row){
     echo $row->Tables_in_test;
 }
+
+*/
 /*
 $result = $stm->fetchAll(PDO::FETCH_OBJ);
 //$result = $stm->fetchAll(PDO::FETCH_ASSOC);
@@ -27,7 +39,7 @@ foreach ($result as $row){
     //var_dump($row);
 }*/
 
-//var_dump($connection->query('CREATE TABLE user (id integer not null, name varchar(25), idade integer);'));
+var_dump($connection->query('CREATE TABLE user (id integer not null, name varchar(25), idade integer);'));
 
 $stment = $connection->prepare('INSERT INTO user VALUES (:id, :name, :idade);');
 $stment->bindParam(':id', $id, PDO::PARAM_INT);

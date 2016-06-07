@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Primeira Página</title>
+        <style>
+            input {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="form.php"" method="POST">
+            <label for="name">Nome<input type="text" name="aluno[1][name]" required></label>
+            <label for="age">Idade<input type="text" name="aluno[1][age]" required></label>
+            <label for="email">Email<input type="email" name="aluno[1][email]" required></label>
+            <label for="opcao">Opcao<input type="checkbox" name="aluno[1][opcao]" value="1234"></label>   
+            
+            <label for="name">Nome<input type="text" name="aluno[2][name]"></label>
+            <label for="age">Idade<input type="text" name="aluno[2][age]"></label>
+            <label for="opcao">Opcao<input type="checkbox" name="aluno[2][opcao]" value="1234"></label>       
+            
+            <label for="name">Nome<input type="text" name="aluno[3][name]"></label>
+            <label for="age">Idade<input type="text" name="aluno[3][age]"></label>
+            <label for="opcao">Opcao<input type="checkbox" name="aluno[3][opcao]" value="1234"></label>       
+            
+            <label for="name">Nome<input type="text" name="aluno[4][name]"></label>
+            <label for="age">Idade<input type="text" name="aluno[4][age]"></label>
+            <label for="opcao">Opcao<input type="checkbox" name="aluno[4][opcao]" value="1234"></label>                
+            <input type="submit">
+        </form>
+    </body>
+</html>

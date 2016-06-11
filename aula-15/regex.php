@@ -19,13 +19,21 @@ if(false !== preg_match('/[a-zA-Z]/', $string)){
 }
 
 // Retorna somente a primeira ocorrencia
-$string = 'Teste 123 ABC';
-preg_match('/[a-zA-Z]/', $string, $matches);
+$string = 'T1e3s 123 ABC';
+preg_match('/[a-zA-Z]{2,5}/', $string, $matches);
 
 var_dump($matches);
 
-$string = 'Teste 123 ABC';
-preg_match('/(a-zA-Z)(a-zA-Z)/', $string, $matches, PREG_OFFSET_CAPTURE);
+// Retorna no
+$string = 'T1e3ste 123 ABC';
+preg_match('/([a-zA-Z])([a-zA-Z])/', $string, $matches, PREG_OFFSET_CAPTURE);
 
 var_dump($matches);
+
+$modificado = preg_replace('/([a-zA-Z])([a-zA-Z])/', 'ABC', $string);
+
+var_dump($modificado);
+
+
+
 

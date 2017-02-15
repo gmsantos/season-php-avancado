@@ -26,7 +26,7 @@ $magica->setMyProperty('Outra coisa diferente');
 echo $magica->getMyProperty();
 
 // Call static
-echo Magic::algumaCoisa('Teste');
+echo Magic::algumaCoisa('Teste', '123', 40);
 
 // toString
 echo $magica;

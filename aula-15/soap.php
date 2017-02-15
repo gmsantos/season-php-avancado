@@ -4,8 +4,8 @@ $client = new SoapClient('http://ws.correios.com.br/calculador/CalcPrecoPrazo.as
 
 try {
 
-    //var_dump($client->__getFunctions());
-    //var_dump($client->__getTypes());
+    var_dump($client->__getFunctions());
+    var_dump($client->__getTypes());
 
     $resposta = $client->CalcPrazo([
         'nCdServico' => '40010', // Sedex

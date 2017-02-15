@@ -2,7 +2,7 @@
 
 class Base 
 {
-    private $var = 1;
+    protected $var = 1;
     
     public function exibeVar()
     {
@@ -12,9 +12,14 @@ class Base
 
 class Derivada extends Base
 {
-    private $var = 2;
+    public $var = 2;
+
+    public function exibeVar()
+    {
+        return $this->var;
+    }   
 
 }
 
 $c = new Derivada();
-echo $c->exibeVar();
+echo $c->exibeVar('teste');

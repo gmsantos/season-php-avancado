@@ -4,7 +4,7 @@ interface minhaInterface{
     public function test();
 }
 
-class myClass extends minhaInterface{
+class myClass implements minhaInterface{
     
     public function test()
     {

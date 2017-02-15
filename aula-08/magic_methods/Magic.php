@@ -19,7 +19,7 @@ class Magic
         
         $this->teste = new Teste();
     }
-    
+
     public function __destruct()
     {
         echo 'Bye Bye' . PHP_EOL;

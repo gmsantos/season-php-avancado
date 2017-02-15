@@ -36,6 +36,4 @@ $singleton3->user = 'abc';
 
 $singleton4 = Singleton::getInstance();
 
-var_dump($singleton4)
-
-
+var_dump($singleton4);
